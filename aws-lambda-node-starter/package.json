@@ -1,0 +1,15 @@
+{
+    "name": "aws-lambda-node-starter",
+    "version": "1.0.0",
+    "description": "A starter project for AWS CloudFormation and AWS Lambda using NodeJS.",
+    "author": "Sebastian Hesse <info@sebastianhesse.de> (https://www.sebastianhesse.de)",
+    "main": "src/index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "mkdirp target && browserify src/index.js -s default -o target/index.js"
+    },
+    "devDependencies": {
+        "browserify": "^14.4.0",
+        "mkdirp": "^0.5.1"
+    }
+}

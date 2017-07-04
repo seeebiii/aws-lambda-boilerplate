@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Hello World Stack for a AWS Lambdas using Java and NodeJS.
+
+Resources:
+  NodeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Timeout: 10
+      CodeUri: ./node-backend/target
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        GetNodeResource:
+          Type: Api
+          Properties:
+            Path: /node
+            Method: get
+
+  JavaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: de.sebastianhesse.examples.JavaHelloWorldHandler
+      Runtime: java8
+      Timeout: 10
+      CodeUri: ./java-backend/target/target.jar
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        GetJavaResource:
+          Type: Api
+          Properties:
+            Path: /java
+            Method: get
