@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Hello World Stack for a AWS Lambdas using Java and NodeJS.
+Description: Hello World Stack for a AWS Lambdas using Java.
 
 Resources:
   JavaFunctionOne:
@@ -35,6 +35,22 @@ Resources:
             Path: /two
             Method: get
 
+  JavaApiGatewayEventExample:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: de.sebastianhesse.examples.JavaApiGatewayEventExample
+      Runtime: java8
+      Timeout: 30
+      CodeUri: ./target/target.jar
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        GetJavaResource:
+          Type: Api
+          Properties:
+            Path: /event
+            Method: get
+
 Outputs:
   TestUrlOne:
     Value: !Sub https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/one
@@ -43,3 +59,7 @@ Outputs:
   TestUrlTwo:
     Value: !Sub https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/two
     Description: The url to invoke your Lambda function two.
+
+  TestEvent:
+    Value: !Sub https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/event
+    Description: The url to invoke your Lambda function using API Gateway event classes.
