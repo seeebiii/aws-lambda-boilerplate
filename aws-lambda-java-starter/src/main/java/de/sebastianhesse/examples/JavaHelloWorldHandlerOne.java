@@ -12,11 +12,11 @@ import java.io.OutputStream;
 /**
  * Example handler class which just sends a 200 response back.
  */
-public class JavaHelloWorldHandler implements RequestStreamHandler {
+public class JavaHelloWorldHandlerOne implements RequestStreamHandler {
 
 
     public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.writeValue(outputStream, new Response(200, "Hello World!"));
+        objectMapper.writeValue(outputStream, new Response(200, "Hello World One!"));
     }
 }

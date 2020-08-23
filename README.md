@@ -1,17 +1,17 @@
 # aws-lambda-boilerplate
 A collection of starter projects for [AWS Lambda](https://aws.amazon.com/lambda/) using [CloudFormation](https://aws.amazon.com/cloudformation/).
-Example projects are using NodeJS, Java or NodeJS and Java (in one project).
+Example projects are using Node.js, Java or Node.js and Java (in one project).
 
 
 ## aws-lambda-node-starter
 **Folder:** [aws-lambda-node-starter](aws-lambda-node-starter)
 
-**Description:** Contains a simple starter project for NodeJS using [yarn](https://yarnpkg.com).
+**Description:** Contains a simple starter project for Node.js using [yarn](https://yarnpkg.com).
 
 **Run:**
 1. Add a [S3 bucket](https://aws.amazon.com/s3/) to [deploy.sh](aws-lambda-node-starter/deploy.sh) where your packaged JS or JAR files are uploaded to.
-2. Run `./deploy.sh`
-3. Access the NodeJS Lambda function called `node-starter-NodeFunction-XXX` using your [AWS Console](https://console.aws.amazon.com).
+2. Run `./deploy.sh` -> the script will print the urls to invoke your Lambda functions using the browser.
+3. Alternative: Access the Node.js Lambda function called `node-starter-NodeFunction-XXX` using your [AWS Console](https://console.aws.amazon.com).
 
 
 ## aws-lambda-java-starter
@@ -21,20 +21,20 @@ Example projects are using NodeJS, Java or NodeJS and Java (in one project).
 
 **Run:**
 1. Add a [S3 bucket](https://aws.amazon.com/s3/) to [deploy.sh](./aws-lambda-java-starter/deploy.sh) where your packaged JS or JAR files are uploaded to.
-2. Run `./deploy.sh`
-3. Access the Java Lambda function called `java-starter-JavaFunction-XXX` using your [AWS Console](https://console.aws.amazon.com).
+2. Run `./deploy.sh` -> the script will print the urls to invoke your Lambda functions using the browser.
+3. Alternative: Access the Java Lambda functions called `java-starter-JavaFunctionOne-XXX` or `java-starter-JavaFunctionTwo-XXX` using your [AWS Console](https://console.aws.amazon.com).
 
 
 ## aws-lambda-node-java-starter
 **Folder:** [aws-lambda-node-java-starter](aws-lambda-node-java-starter)
 
-**Description:** Contains a simple starter project for NodeJS and Java using [yarn](https://yarnpkg.com) and [Maven](https://maven.apache.org/).
+**Description:** Contains a simple starter project for Node.js and Java using [yarn](https://yarnpkg.com) and [Maven](https://maven.apache.org/).
 
 **Run:**
 1. Add a [S3 bucket](https://aws.amazon.com/s3/) to [deploy.sh](aws-lambda-node-java-starter/deploy.sh) where your packaged JS or JAR files are uploaded to.
-2. Run `./deploy.sh`
-3. Access the NodeJS Lambda function called `node-java-starter-NodeFunction-XXX` using your [AWS Console](https://console.aws.amazon.com).
-4. Access the Java Lambda function called `node-java-starter-JavaFunction-XXX` using your [AWS Console](https://console.aws.amazon.com).
+2. Run `./deploy.sh` -> the script will print the urls to invoke your Lambda functions using the browser.
+3. Alternative: Access the Node.js Lambda function called `node-java-starter-NodeFunction-XXX` using your [AWS Console](https://console.aws.amazon.com).
+4. Alternative: Access the Java Lambda function called `node-java-starter-JavaFunction-XXX` using your [AWS Console](https://console.aws.amazon.com).
 
 
 ## License

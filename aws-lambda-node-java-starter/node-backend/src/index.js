@@ -1,6 +1,6 @@
 module.exports.handler = function(event, context, callback) {
     callback(null, {
         statusCode: 200,
-        body: 'NodeJS Hello World!'
+        body: 'Node.js Hello World!'
     });
 };

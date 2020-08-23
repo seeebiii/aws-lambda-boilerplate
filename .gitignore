@@ -1,5 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
-*.iml
 target
-cfn.packaged.yml
+**/target
+**/node_modules
+
+**/*.iml
+**/cfn.packaged.yml

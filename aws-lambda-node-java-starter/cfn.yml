@@ -1,13 +1,13 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Hello World Stack for a AWS Lambdas using Java and NodeJS.
+Description: Hello World Stack for AWS Lambdas functions using Java and Node.js.
 
 Resources:
   NodeFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs12.x
       Timeout: 10
       CodeUri: ./node-backend/target
       Policies:
@@ -34,3 +34,13 @@ Resources:
           Properties:
             Path: /java
             Method: get
+
+
+Outputs:
+  TestUrlOne:
+    Value: !Sub https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/node
+    Description: The url to invoke your Node Lambda function.
+
+  TestUrlTwo:
+    Value: !Sub https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/java
+    Description: The url to invoke your Java Lambda function.
