@@ -9,7 +9,7 @@
         "build": "mkdirp target && browserify src/index.js -s default -o target/index.js"
     },
     "devDependencies": {
-        "browserify": "^16.5.2",
+        "browserify": "^17.0.0",
         "mkdirp": "^1.0.4"
     }
 }
